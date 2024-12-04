@@ -290,9 +290,6 @@ Explanation:
 There are 5 persons so skipping 2 person i.e 3rd person will be killed. Thus the safe position is 4.
 ```
 
-References:
-[GeeksForGeeks](https://www.geeksforgeeks.org/problems/josephus-problem/1)
-
 # FAQ
 
 #### Who can join the Challenge?
