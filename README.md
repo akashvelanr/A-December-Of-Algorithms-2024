@@ -291,7 +291,7 @@ There are 5 persons so skipping 2 person i.e 3rd person will be killed. Thus the
 ```
 
 References:
-[text](https://www.geeksforgeeks.org/problems/josephus-problem/1)
+[GeeksForGeeks](https://www.geeksforgeeks.org/problems/josephus-problem/1)
 
 # FAQ
 
