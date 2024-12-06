@@ -26,8 +26,294 @@ Check out our FAQ for more information.
 
 ## Index
 
+- [**December 01 - The Vanishing Number**](#december-01---the-vanishing-number)
+- [**December 02 - The Wave Sort Challenge**](#december-02---the-wave-sort-challenge)
+- [**December 03 - Alternating Square Arrangement**](#december-03---alternating-square-arrangement)
+- [**December 04 - Plant Growth Tracker**](#december-04---plant-growth-tracker)
+- [**December 05 - Josephus Problem**](#december-05---josephus-problem)
+- [**December 06 - Target Pair Finder**](#december-06---target-pair-finder)
+
 - [**FAQ**](#faq)
 
+## Algorithms
+
+### December 01 - The Vanishing Number
+
+#### Problem Statement
+
+```
+Imagine a race event with N participants, each having a unique bib number from 1 to N.
+After the race, the event organizers collect the bib numbers of all participants who showed
+up. However, one participant didn’t show up, and their bib number is missing. The task is to
+find out which bib number is missing in order to identify the participant who was absent.
+```
+
+```
+Given an integer N and an array of size N-1 containing N-1 numbers between 1 to N. Find
+the number(between 1 to N), that is not present in the given array.
+```
+
+![image](https://github.com/user-attachments/assets/177fbe2f-9248-481b-adb6-61dfcea59582)
+
+Example 1:
+
+```
+Input Format:
+N = 5, array[] = {1,2,4,5}
+Result: 3
+```
+
+```
+Explanation:
+In the given array, number 3 is missing. So, 3 is the answer.
+```
+
+Example 2:
+
+```
+Input Format:
+N = 3, array[] = {1,3}
+Result: 2
+```
+
+### December 02 - The Wave Sort Challenge
+
+#### Problem Statement
+
+```
+Imagine you're at a music concert, surrounded by thousands of fans.
+As the music plays, the crowd begins to move in a rhythmic pattern, rising and falling like a wave.
+The energy is contagious, and everyone follows the same wave-like motion.
+Now, think of the crowd as an unsorted array of integers, and your job is to arrange them in such a way that
+the heights of the fans rise and fall, just like the waves at the concert.
+Your task is to organize the array in a similar wave-like fashion!
+```
+
+```
+Sort an array in wave form
+Given an unsorted array of integers, sort the array into a wave array. An array arr[0..n-1] is sorted in wave form if:
+arr[0] >= arr[1] <= arr[2] >= arr[3] <= arr[4] >= ….
+
+```
+
+![image1](https://github.com/user-attachments/assets/7c46bc27-91f9-4a89-8731-37efa558a939)
+
+Example 1:
+
+```
+Input:
+arr[] = {10, 5, 6, 3, 2, 20, 100, 80}
+Output:
+arr[] = {10, 5, 6, 2, 20, 3, 100, 80}
+
+```
+
+```
+Explanation:
+Here you can see {10, 5, 6, 2, 20, 3, 100, 80}. The first element is larger than the second, and the same pattern repeats again.
+Large element – small element – large element – small element, and so on.
+It can also be in the opposite pattern (small element – large element – small element – large element).
+All you need to maintain is the up-down fashion, which represents a wave. There can be multiple answers.
+
+```
+
+Example 2:
+
+```
+Additional Scenario
+Input:
+arr[] = {1, 2, 3, 4, 5, 6}
+Output:
+arr[] = {2, 1, 4, 3, 6, 5}
+
+```
+
+```
+Explanation:
+In this case, we swap adjacent elements to form a wave-like array.
+{2, 1, 4, 3, 6, 5} satisfies the condition where elements are alternately large and small.
+
+```
+
+### December 03 - Alternating Square Arrangement
+
+#### Problem Statement
+
+```
+You are given integers ￼ (number of red squares) and ￼ (number of blue squares).
+Your task is to arrange the squares in a sequence such that:
+No two adjacent squares have the same color.
+If it is not possible to create such an arrangement, return "Not possible".
+
+```
+
+```
+Input
+
+Two integers:
+R￼: Number of red squares.
+B￼: Number of blue squares.
+
+Output
+
+A valid arrangement as a string (e.g., "RBRBR" or "BRBRB") that satisfies the condition, or "Not possible" if no valid arrangement exists.
+
+
+```
+
+Sample Input and Output:
+Example 1:
+
+```
+Input:
+R = 3
+B = 2
+
+Output:
+"RBRBR"
+```
+
+Explanation:
+
+```
+The sequence "RBRBR" satisfies the condition since no two adjacent squares are the same color.
+```
+
+Example 2:
+
+```
+Input:
+R = 4
+B = 2
+
+Output:
+"Not possible"
+```
+
+Explanation:
+
+```
+It is impossible to arrange 4 red squares and 2 blue squares without
+having two adjacent squares of the same color. Hence, the output is "Not possible".
+
+```
+
+### December 04 - Plant Growth Tracker
+
+#### Problem Statement
+
+```
+You are designing a program to help a gardener plan how to grow a special type of plant. The plants
+grow in an interesting pattern:
+• It takes 2 months for the plant to before it starts increasing in numbers.
+• Starting from the third month, the number of plants in a month is the sum of the plants in the
+previous two months.
+For example, in the third month, there are 2 plants (1 + 1), in the fourth month, there are 3 plants (1 +
+2), and so on.
+```
+
+![image](https://github.com/user-attachments/assets/4810c82d-5cc3-4ab8-a247-64d8d8133e44)
+
+```
+However, the gardener needs your help to write a program that predicts the number of plants for
+any given number of months, n. Here's the catch:
+• The gardener's old computer struggles to handle repeated function calls. As a result, you
+cannot use recursion to solve this problem.
+```
+
+Example 1:
+
+```
+Input: No of Months: 10
+Output: 55
+```
+
+Explanation:
+
+```
+We apply Fibonacci sequence here. Since the growth of the plant perfectly mirrors with Fibonacci
+algorithm, as the gardener's computer is old, we have to use for loops and if statements to generate
+the sequence.
+```
+
+Example 2:
+
+```
+Input: No of Months: 12
+Output: 144
+```
+
+### December 05 - Josephus Problem
+
+#### Problem Statement
+
+```
+A total of n people are standing in a circle, and you are one of them playing a game.
+Starting from a person, k persons will be counted in order along the circle, and the kth person will be killed.
+Then the next k persons will be counted along the circle, and again the kth person will be killed. This cycle will
+continue until only a single person is left in the circle.
+If there are 5 people in the circle in the order A, B, C, D, and E, you will choose k=3. Starting from A, you will
+count A, B and C. C will be the 3rd person and will be killed. Then you will continue counting from D, E and
+then A. A will be third person and will be killed.
+```
+
+![image](https://github.com/user-attachments/assets/5925562d-fc20-48b7-9114-016a0f2819e0)
+
+```
+You will be given an array where the first element is the first person from whom the counting will start and
+the subsequent order of the people. You want to be the last one standing. Determine the index at which you
+should stand to survive the game. Return an integer denoting safe position.
+```
+
+Example 1:
+
+```
+Input: n = 3, k = 2
+Output: 3
+```
+
+Explanation:
+
+```
+There are 3 persons so skipping 1 person i.e 1st person 2nd person will be killed. Thus the safe
+position is 3.
+```
+
+Example 2:
+
+```
+Input: n = 5, k = 3
+Output: 4
+```
+
+Explanation:
+
+```
+There are 5 persons so skipping 2 person i.e 3rd person will be killed. Thus the safe position is 4.
+```
+### December 06 - Target Pair Finder
+#### Problem Statement
+```
+From the initialised list of integers and a target sum by the user,
+find all unique pairs of numbers from the list that add up to the target.
+You can use nested loops and conditionals.
+```
+
+
+Sample I/O 1:
+```
+INPUT: 1) A list of integers: numbers = [2, 4, 3, 7, 1, 5].
+              2) A target sum: target = 6.
+OUTPUT:  Unique pairs are [(2, 4), (1, 5)]
+```
+Sample I/O 2:
+```
+INPUT:  1) A list of integers: numbers = [10, 15, 3, 7, 8, 12, 5].
+              2)  A target sum: target = 20.
+OUTPUT: Unique pairs are [(10, 10), (8, 12), (15, 5)]
+Explanation:
+The Target Pair Finder problem is about finding pairs of numbers in a list that add up to a specific target value. From the above example we can see that (10, 10): The first 10 and the second 10 in the list add up to 20, so thereby find all sets of unique pair from the given list summing up to the target value.
+```
 # FAQ
 
 #### Who can join the Challenge?
@@ -101,3 +387,7 @@ Open up an [issue](https://github.com/SVCE-ACM/A-December-of-Algorithms-2021/iss
 ###### [[Back to Top]](#----)
 
 ![wave](http://cdn.thekrishna.in/img/common/border.png)
+
+```
+
+```
