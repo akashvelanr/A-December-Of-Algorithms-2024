@@ -380,7 +380,7 @@ For N = 12, the program calculates the following:
 - 12 -> 1^2 + 2^2 = 1 + 4 = 5
 ```
 ```
-The total sum is 1 + 4 + 9 + 16 + 25 + 36 + 49 + 64 + 81 + 1 + 4 + 5 = 295.
+The total sum is 1 + 4 + 9 + 16 + 25 + 36 + 49 + 64 + 81 + 1 + 2 + 5 = 293.
 Output:
 The program should return the total Digit Square Sum.
 ```
