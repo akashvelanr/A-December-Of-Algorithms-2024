@@ -33,6 +33,11 @@ Check out our FAQ for more information.
 - [**December 05 - Josephus Problem**](#december-05---josephus-problem)
 - [**December 06 - Target Pair Finder**](#december-06---target-pair-finder)
 - [**December 07 - The Magical Tower**](#december-07---the-magical-tower)
+- [**December 08 - Digit Manipulation**](#december-08---digit-manipulation)
+- [**December 09 - Customer Return Frequency**](#december-09---customer-return-frequency)
+- [**December 10 - Concurrent Task Execution**](#december-10---concurrent-task-execution)
+- [**December 11 - The Robot Returns**](#december-11---the-robot-returns)
+- [**December 12 - Smart Ticketing System**](#december-12---smart-ticketing-system)
 
 - [**FAQ**](#faq)
 
@@ -351,7 +356,222 @@ Sample I/O 2:
 INPUT:  numRows=1
 OUTPUT: [1]
 ```
+### December 08 - Digit Manipulation
 
+#### Problem Statement
+```
+Write a program to calculate the Digit Square Sum for all numbers from 1 to a given positive integer
+N.
+The Digit Square Sum of a number is calculated by squaring each digit of the number and then
+summing up the squares.
+```
+```
+Your task is to write a function that:
+1. Takes an integer N as input.
+2. Computes the Digit Square Sum for each number from 1 to N.
+3. Returns the total sum of these values.
+```
+
+Example 1:
+```
+For N = 12, the program calculates the following:
+- 1 -> 1^2 = 1
+- 2 -> 2^2 = 4
+- 3 -> 3^2 = 9
+- ...
+- 12 -> 1^2 + 2^2 = 1 + 4 = 5
+```
+```
+The total sum is 1 + 4 + 9 + 16 + 25 + 36 + 49 + 64 + 81 + 1 + 2 + 5 = 293.
+Output:
+The program should return the total Digit Square Sum.
+```
+
+
+### December 09 - Customer Return Frequency
+
+#### Problem Statement
+
+```
+You are managing an e-commerce platform and you have a list of customer return
+frequencies (how many times a customer has returned products). Your task is to find the total number of
+customers who have returned products exactly once.
+```
+
+
+Example 1:
+
+```
+Input Format:
+returns = [2, 1, 5, 1, 0, 3, 1, 4, 1]
+Result: 4
+```
+
+```
+Explanation:
+The list returns = [2, 1, 5, 1, 0, 3, 1, 4, 1] represents the return frequency of each customer.
+ We are looking for customers who have returned products exactly once, so we need to count how
+many times 1 appears in the list.
+```
+
+Example 2:
+
+```
+Input Format:
+returns = [4, 3, 7, 2, 1, 0, 2, 1, 3]
+Result: 2
+```
+### December 10 - Concurrent Task Execution
+#### Problem Statement
+```
+You are given a list of tasks, where each task has a unique identifier and a list of dependencies (other
+tasks that must be completed before this task can be executed). Your goal is to determine a valid
+order to execute the tasks using concurrency wherever possible.
+You must account for the dependencies and ensure no task runs before its dependencies are
+completed. If no valid execution order exists (i.e., there is a cyclic dependency), return an error
+message.
+```
+Input:
+```
+• A list of tasks, where each task is represented as a pair (task_id, dependencies).
+o task_id is a unique identifier for the task (e.g., an integer or string).
+o dependencies is a list of task IDs that must be completed before the given task can
+run.
+```
+Output:
+```
+If a valid task execution order exists, return a list of lists, where each sublist contains the task
+IDs that can be executed concurrently at that step.
+• If no valid order exists (i.e., a circular dependency is found), return the message "Error: Cyclic
+dependency detected".
+```
+
+![image](https://github.com/user-attachments/assets/e848e914-4128-457a-be5b-6f64699b86df)
+
+Sample 1:
+```
+Input:
+tasks = [
+ ("A", []),
+ ("B", ["A"]),
+ ("C", ["A"]),
+ ("D", ["B", "C"]),
+ ("E", ["D"])
+]
+```
+```
+Output:
+[["A"], ["B", "C"], ["D"], ["E"]]
+```
+Explanation:
+```
+• "A" has no dependencies, so it runs first.
+• "B" and "C" both depend only on "A", so they can run concurrently.
+• "D" depends on both "B" and "C", so it runs after them.
+• "E" depends on "D", so it runs last
+```
+Sample 2:
+```
+Input:
+tasks = [
+ ("A", ["B"]),
+ ("B", ["A"])
+]
+```
+```
+Output:
+"Error: Cyclic dependency detected"
+```
+
+Explanation:
+```
+• "A" depends on "B" and "B" depends on "A", creating a cycle.
+```
+
+### December 11 - The Robot Returns
+#### Problem Statement
+```
+There is a robot starting at the position (0, 0), the origin, on a 2D plane. Given a
+sequence of its moves, judge if this robot ends up at (0, 0) after it completes its moves.
+You are given a string moves that represents the move sequence of the robot where moves[i] represents
+its i
+th move. Valid moves are 'R' (right), 'L' (left), 'U' (up), and 'D' (down).
+Return true if the robot returns to the origin after it finishes all of its moves, or false otherwise.
+```
+```
+Note: The way that the robot is "facing" is irrelevant. 'R' will always make the robot move to the right
+once, 'L' will always make it move left, etc. Also, assume that the magnitude of the robot's movement is the
+same for each move.
+```
+![image](https://github.com/user-attachments/assets/d6399796-727c-417b-9f6c-c68a4bc21743)
+
+Sample 1:
+```
+Input: moves = "UD"
+Output: true
+Explanation: The robot moves up once, and then down once. All moves have the same magnitude, so it
+ended up at the origin where it started. Therefore, we return true.
+```
+Sample 2:
+```
+Input: moves = "LL"
+Output: false
+Explanation: The robot moves left twice. It ends up two "moves" to the left of the origin. We return false
+because it is not at the origin at the end of its moves.
+```
+Reference: For more information on topological sorting and dependency resolution, check out this guide on https://www.geeksforgeeks.org/topological-sorting/
+
+
+### December 12 - Smart Ticketing System
+#### Problem Statement
+```
+You are tasked with designing a Smart Ticketing System for a popular concert. The system
+manages ticket requests using a queue data structure but with additional complexity:
+1. Priority Handling:
+Some customers are marked as VIPs (designated by a VIP tag in their request). VIP
+customers have higher priority and are served before regular customers, regardless of
+their position in the queue. However, among VIPs or regular customers, the requests are
+handled in the order they are received (FIFO).
+2. Dynamic Ticket Allocation:
+Each request includes the number of tickets the customer wants. If the requested tickets
+exceed the remaining tickets, the system will allocate all remaining tickets to the
+customer.
+3. Queue Operation:
+If a customer receives fewer tickets than requested due to limited availability, the request
+is still considered processed, and the next customer in the queue is served.
+You must implement a program that processes these ticket requests and returns the result of
+each transaction.
+```
+Contraints:
+```
+1. 2. 3. The system starts with N tickets available.
+Each request is represented as a string in the format "CustomerName
+NumberOfTickets [VIP]"
+If [VIP] is not present, the customer is treated as a regular customer.
+Requests are processed until all tickets are sold out or the queue is empty
+```
+Sample 1:
+```
+Input:
+N = 5
+requests = ["John 2 VIP" ,"Alice 3", "Bob 2" , "Charlie 1 VIP"]
+Output:
+["John purchased 2 tickets", "Charlie purchased 1 tickets"
+, "Alice purchased 2 tickets", Bob was not served"]
+Explanation:
+"John 2 VIP" is served first because he is a VIP.
+"Charlie 1 VIP" is served next, as he is also a VIP.
+"Alice 3" is served, but only 2 tickets are left, so she gets 2.
+"Bob 2" cannot be served as there are no tickets remaining.
+```
+Sample 2:
+```
+Input:
+N = 10
+requests = ["Eve 4","Diana 3 VIP","Adam 5","Frank 6 VIP"]
+Output:
+["Diana purchased 3 tickets","Frank purchased 6 tickets","Eve purchased tickets", "Adam was not served"]
+```
 # FAQ
 
 #### Who can join the Challenge?
