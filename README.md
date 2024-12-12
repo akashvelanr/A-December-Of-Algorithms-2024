@@ -37,7 +37,7 @@ Check out our FAQ for more information.
 - [**December 09 - Customer Return Frequency**](#december-09---customer-return-frequency)
 - [**December 10 - Concurrent Task Execution**](#december-10---concurrent-task-execution)
 - [**December 11 - The Robot Returns**](#december-11---the-robot-returns)
-
+- [**December 12 - Smart Ticketing System**](#december-12---smart-ticketing-system)
 
 - [**FAQ**](#faq)
 
@@ -522,7 +522,7 @@ because it is not at the origin at the end of its moves.
 Reference: For more information on topological sorting and dependency resolution, check out this guide on https://www.geeksforgeeks.org/topological-sorting/
 
 
-### December 12
+### December 12 - Smart Ticketing System
 #### Problem Statement
 ```
 You are tasked with designing a Smart Ticketing System for a popular concert. The system
