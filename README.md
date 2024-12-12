@@ -38,6 +38,8 @@ Check out our FAQ for more information.
 - [**December 10 - Concurrent Task Execution**](#december-10---concurrent-task-execution)
 - [**December 11 - The Robot Returns**](#december-11---the-robot-returns)
 - [**December 12 - Smart Ticketing System**](#december-12---smart-ticketing-system)
+- [**December 13 - Minimum Swap Sorting Problem**](#december-13---minimum-swap-sorting-problem)
+
 
 - [**FAQ**](#faq)
 
@@ -572,6 +574,47 @@ requests = ["Eve 4","Diana 3 VIP","Adam 5","Frank 6 VIP"]
 Output:
 ["Diana purchased 3 tickets","Frank purchased 6 tickets","Eve purchased tickets", "Adam was not served"]
 ```
+### December 13 - Minimum Swap Sorting Problem
+#### Problem Statement
+```
+John has a list of unique integers that he wants to sort in ascending order.
+However, he can only sort the list by swapping two elements at a time.
+The "cost" of each swap is 1 unit.
+Your task is to determine the minimum cost
+(i.e., the minimum number of swaps required) to sort the list.
+```
+Example 1:
+```
+Sample Input 1:
+5
+4 3 1 2 5
+Sample Output 1:
+3
+```
+Explanation:
+```
+The given list is [4, 3, 1, 2, 5].
+Swap 4 and 1: [1, 3, 4, 2, 5]
+Swap 3 and 2: [1, 2, 4, 3, 5]
+Swap 4 and 3: [1, 2, 3, 4, 5]
+Total swaps = 3. Hence, the minimum cost is 3.
+```
+Example 2:
+```
+Sample Input 2:
+4
+2 3 4 1
+Sample Output 2:
+3
+```
+```
+Input Format:
+The first line contains an integer, N, the total number of integers in the list.
+The second line contains N space-separated integers representing the list.
+Output Format:
+An integer representing the minimum cost (number of swaps) required to sort the list.
+```
+References: This problem is inspired by sorting algorithms and cycle detection in graphs.
 # FAQ
 
 #### Who can join the Challenge?
