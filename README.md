@@ -40,6 +40,8 @@ Check out our FAQ for more information.
 - [**December 12 - Smart Ticketing System**](#december-12---smart-ticketing-system)
 - [**December 13 - Minimum Swap Sorting Problem**](#december-13---minimum-swap-sorting-problem)
 - [**December 14 - Split the Squad**](#december-14---split-the-squad)
+- [**December 15 -  Holiday Gift Arrangement**](#december-15---holiday-gift-arrangement)
+
 
 
 
@@ -683,6 +685,39 @@ References
 https://www.geeksforgeeks.org/greedy-algorithms
 https://www.geeksforgeeks.org/hashing-data-structure
 
+
+
+### December 15 - Holiday Gift Arrangement
+#### Problem Statement
+```
+It’s December, and Santa is preparing to deliver gifts. He has N houses to visit,
+each requiring a certain number of gifts. Santa’s sleigh can carry a maximum of W gifts at a time.
+You are given:
+	•	An array houses[] where each element represents the number of gifts required at a house.
+	•	The maximum carrying capacity W of Santa’s sleigh.
+Santa needs to minimize the number of trips required to deliver all the gifts.
+Each trip can serve one or more consecutive houses as long as the total number of gifts does not exceed W.
+Write a function minTrips(houses, W) that returns the minimum number of trips Santa needs to deliver the gifts
+Here is an artistic depiction of Santa Claus preparing for his December gift deliveries.
+It captures the festive and cheerful atmosphere with snow-covered houses and a sleigh loaded with gifts.
+```
+Example:
+```
+Input:
+houses = [2, 3, 5, 2, 1]
+W = 6
+Output:
+3
+Explanation:
+	•	Trip 1: Deliver to house 1 and 2 (2 + 3 gifts = 5 ≤ 6).
+	•	Trip 2: Deliver to house 3 (5 gifts = 5 ≤ 6).
+	•	Trip 3: Deliver to house 4 and 5 (2 + 1 gifts = 3 ≤ 6).
+
+```
+Hints:
+```
+Use a greedy approach to group consecutive houses.
+```
 # FAQ
 
 #### Who can join the Challenge?
