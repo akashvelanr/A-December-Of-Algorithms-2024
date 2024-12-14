@@ -39,6 +39,8 @@ Check out our FAQ for more information.
 - [**December 11 - The Robot Returns**](#december-11---the-robot-returns)
 - [**December 12 - Smart Ticketing System**](#december-12---smart-ticketing-system)
 - [**December 13 - Minimum Swap Sorting Problem**](#december-13---minimum-swap-sorting-problem)
+- [**December 14 - Split the Squad**](#december-14---split-the-squad)
+
 
 
 - [**FAQ**](#faq)
@@ -613,6 +615,72 @@ The first line contains an integer, N, the total number of integers in the list.
 The second line contains N space-separated integers representing the list.
 Output Format:
 An integer representing the minimum cost (number of swaps) required to sort the list.
+```
+
+### December 14 - Split the Squad
+#### Problem Statement
+```
+Alice has N students in his class, numbered 1 through N. Each student has
+expertise in a subject numbered Ai
+
+. Alice has to divide the students into two
+
+teams Team 1 and Team 2, such that:
+1. Each student belongs to exactly one team.
+
+2. The uniqueness of each team is exactly K.
+
+3. Additionally, the difference in the number of students between the two teams
+must not exceed D.
+```
+```
+The uniqueness of a team is defined as the number of distinct subjects such that
+there is at least one student in the team with expertise in the subject. For
+example, the uniqueness of a team denoted by A = [1, 3, 1, 4, 4] is 3.
+Alice wants to know if it is possible to distribute the students into two teams
+satisfying the conditions.
+```
+```
+Input format
+The first line contains an integer T, the number of test cases.
+For each test case:
+The first line contains three integers N, K, and D.
+The second line contains N integers A1
+,A2
+,....,An
+```
+```
+Output format
+For each test case, print YES if Alice is able to make two teams satisfying the
+given conditions, otherwise print NO.
+```
+```
+Constraints
+
+1 ≤ T ≤ 105
+2 ≤N ≤ 105
+1 ≤ K ≤ N
+1 ≤ D ≤ N
+1 ≤ Ai ≤ N
+```
+![image](https://github.com/user-attachments/assets/3111d8a4-a02d-4804-b7e4-f2257d631abe)
+
+```
+Explanation
+Test Case 1:
+Divide students into Team 1 = [1, 2, 2] and Team 2 = [3, 4, 4]. Both teams have
+a uniqueness of 2, and the difference in the number of students is 0 (≤ 2).
+Output is YES.
+
+Test Case 2:
+No way to divide the students into two teams with both having a uniqueness of
+3 while keeping the size difference ≤ 1.
+Output is NO.
+```
+```
+References
+https://www.geeksforgeeks.org/greedy-algorithms
+https://www.geeksforgeeks.org/hashing-data-structure
 ```
 References: This problem is inspired by sorting algorithms and cycle detection in graphs.
 # FAQ
