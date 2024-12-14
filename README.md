@@ -616,6 +616,7 @@ The second line contains N space-separated integers representing the list.
 Output Format:
 An integer representing the minimum cost (number of swaps) required to sort the list.
 ```
+References: This problem is inspired by sorting algorithms and cycle detection in graphs.
 
 ### December 14 - Split the Squad
 #### Problem Statement
@@ -677,12 +678,11 @@ No way to divide the students into two teams with both having a uniqueness of
 3 while keeping the size difference ≤ 1.
 Output is NO.
 ```
-```
+
 References
 https://www.geeksforgeeks.org/greedy-algorithms
 https://www.geeksforgeeks.org/hashing-data-structure
-```
-References: This problem is inspired by sorting algorithms and cycle detection in graphs.
+
 # FAQ
 
 #### Who can join the Challenge?
