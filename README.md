@@ -38,6 +38,12 @@ Check out our FAQ for more information.
 - [**December 10 - Concurrent Task Execution**](#december-10---concurrent-task-execution)
 - [**December 11 - The Robot Returns**](#december-11---the-robot-returns)
 - [**December 12 - Smart Ticketing System**](#december-12---smart-ticketing-system)
+- [**December 13 - Minimum Swap Sorting Problem**](#december-13---minimum-swap-sorting-problem)
+- [**December 14 - Split the Squad**](#december-14---split-the-squad)
+- [**December 15 -  Holiday Gift Arrangement**](#december-15---holiday-gift-arrangement)
+
+
+
 
 - [**FAQ**](#faq)
 
@@ -571,6 +577,146 @@ N = 10
 requests = ["Eve 4","Diana 3 VIP","Adam 5","Frank 6 VIP"]
 Output:
 ["Diana purchased 3 tickets","Frank purchased 6 tickets","Eve purchased tickets", "Adam was not served"]
+```
+### December 13 - Minimum Swap Sorting Problem
+#### Problem Statement
+```
+John has a list of unique integers that he wants to sort in ascending order.
+However, he can only sort the list by swapping two elements at a time.
+The "cost" of each swap is 1 unit.
+Your task is to determine the minimum cost
+(i.e., the minimum number of swaps required) to sort the list.
+```
+Example 1:
+```
+Sample Input 1:
+5
+4 3 1 2 5
+Sample Output 1:
+3
+```
+Explanation:
+```
+The given list is [4, 3, 1, 2, 5].
+Swap 4 and 1: [1, 3, 4, 2, 5]
+Swap 3 and 2: [1, 2, 4, 3, 5]
+Swap 4 and 3: [1, 2, 3, 4, 5]
+Total swaps = 3. Hence, the minimum cost is 3.
+```
+Example 2:
+```
+Sample Input 2:
+4
+2 3 4 1
+Sample Output 2:
+3
+```
+```
+Input Format:
+The first line contains an integer, N, the total number of integers in the list.
+The second line contains N space-separated integers representing the list.
+Output Format:
+An integer representing the minimum cost (number of swaps) required to sort the list.
+```
+References: This problem is inspired by sorting algorithms and cycle detection in graphs.
+
+### December 14 - Split the Squad
+#### Problem Statement
+```
+Alice has N students in his class, numbered 1 through N. Each student has
+expertise in a subject numbered Ai
+
+. Alice has to divide the students into two
+
+teams Team 1 and Team 2, such that:
+1. Each student belongs to exactly one team.
+
+2. The uniqueness of each team is exactly K.
+
+3. Additionally, the difference in the number of students between the two teams
+must not exceed D.
+```
+```
+The uniqueness of a team is defined as the number of distinct subjects such that
+there is at least one student in the team with expertise in the subject. For
+example, the uniqueness of a team denoted by A = [1, 3, 1, 4, 4] is 3.
+Alice wants to know if it is possible to distribute the students into two teams
+satisfying the conditions.
+```
+```
+Input format
+The first line contains an integer T, the number of test cases.
+For each test case:
+The first line contains three integers N, K, and D.
+The second line contains N integers A1
+,A2
+,....,An
+```
+```
+Output format
+For each test case, print YES if Alice is able to make two teams satisfying the
+given conditions, otherwise print NO.
+```
+```
+Constraints
+
+1 ≤ T ≤ 105
+2 ≤N ≤ 105
+1 ≤ K ≤ N
+1 ≤ D ≤ N
+1 ≤ Ai ≤ N
+```
+![image](https://github.com/user-attachments/assets/3111d8a4-a02d-4804-b7e4-f2257d631abe)
+
+```
+Explanation
+Test Case 1:
+Divide students into Team 1 = [1, 2, 2] and Team 2 = [3, 4, 4]. Both teams have
+a uniqueness of 2, and the difference in the number of students is 0 (≤ 2).
+Output is YES.
+
+Test Case 2:
+No way to divide the students into two teams with both having a uniqueness of
+3 while keeping the size difference ≤ 1.
+Output is NO.
+```
+
+References
+https://www.geeksforgeeks.org/greedy-algorithms
+https://www.geeksforgeeks.org/hashing-data-structure
+
+
+
+### December 15 - Holiday Gift Arrangement
+#### Problem Statement
+```
+It’s December, and Santa is preparing to deliver gifts. He has N houses to visit,
+each requiring a certain number of gifts. Santa’s sleigh can carry a maximum of W gifts at a time.
+You are given:
+	•	An array houses[] where each element represents the number of gifts required at a house.
+	•	The maximum carrying capacity W of Santa’s sleigh.
+Santa needs to minimize the number of trips required to deliver all the gifts.
+Each trip can serve one or more consecutive houses as long as the total number of gifts does not exceed W.
+Write a function minTrips(houses, W) that returns the minimum number of trips Santa needs to deliver the gifts
+Here is an artistic depiction of Santa Claus preparing for his December gift deliveries.
+It captures the festive and cheerful atmosphere with snow-covered houses and a sleigh loaded with gifts.
+```
+Example:
+```
+Input:
+houses = [2, 3, 5, 2, 1]
+W = 6
+Output:
+3
+Explanation:
+	•	Trip 1: Deliver to house 1 and 2 (2 + 3 gifts = 5 ≤ 6).
+	•	Trip 2: Deliver to house 3 (5 gifts = 5 ≤ 6).
+	•	Trip 3: Deliver to house 4 and 5 (2 + 1 gifts = 3 ≤ 6).
+
+```
+Hints:
+```
+Use a greedy approach to group consecutive houses.
 ```
 # FAQ
 
