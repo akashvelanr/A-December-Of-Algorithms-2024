@@ -41,6 +41,9 @@ Check out our FAQ for more information.
 - [**December 13 - Minimum Swap Sorting Problem**](#december-13---minimum-swap-sorting-problem)
 - [**December 14 - Split the Squad**](#december-14---split-the-squad)
 - [**December 15 -  Holiday Gift Arrangement**](#december-15---holiday-gift-arrangement)
+- [**December 16 -  Train Platform Calculation**](#december-16---train-platform-calculation)
+
+  
 
 
 
@@ -718,6 +721,63 @@ Hints:
 ```
 Use a greedy approach to group consecutive houses.
 ```
+
+### December 16 - Train Platform Calculation
+#### Problem Statement
+```
+We are tasked with determining the minimum number of platforms required at a railway station so that no
+train has to wait for another train to depart. Given the arrival times and departure times of multiple trains,
+the solution must compute how many platforms are required at the station to handle all trains without delay.
+ The input consists of two arrays: arrivals and departures. Each element in arrivals represents the
+arrival time of a train, and the corresponding element in departures represents its departure time.
+ The goal is to calculate the minimum number of platforms required to ensure that no two trains are
+waiting at the same time.
+```
+```
+Constraints
+1. Times are represented in 24-hour format (e.g., 9:00 AM = 900, 11:45 PM = 2345).
+2. Arrival and departure times are sorted or unsorted but paired correctly for each train.
+3. At any point, the number of overlapping intervals (trains at the station) determines the platform
+requirement.
+```
+![image](https://github.com/user-attachments/assets/834a96fa-24d3-45ab-8ef2-cfeb44639432)
+Example 1:
+```
+Input: arrivals = [900, 940, 950, 1100, 1500, 1800]
+departures = [910, 1200, 1120, 1130, 1900, 2000]
+Output 1: Minimum platforms required: 1
+```
+```
+Explanation
+Input Format
+Two Arrays:
+
+1. arrivals: Contains the arrival times of trains in 24-hour format (e.g., 9:00 AM = 900, 11:45
+PM = 2345).
+2. departures: Contains the corresponding departure times of the same trains in 24-hour format.
+
+One-to-One Mapping:
+1. Each element in arrivals corresponds to the same index in departures. For example:
+2. arrivals[0] is the arrival time of Train 1.
+
+3. departures[0] is the departure time of Train 1.
+Time Constraints:
+
+1. Arrival time is always less than or equal to the departure time for each train.
+2. The arrays can be unsorted but must have the same length.
+Sample Input:
+arrivals = [900, 940, 950, 1100, 1500, 1800] departures = [910, 1200, 1120, 1130, 1900, 2000]
+ Train 1: Arrives at 900, departs at 910.
+ Train 2: Arrives at 940, departs at 1200.
+ Train 3: Arrives at 950, departs at 1120, and so on.
+```
+Example 2:
+```
+Input: arrivals = [1030, 1015, 1045, 1100, 1500, 1530]
+departures = [1040, 1105, 1050, 1130, 1515, 1600]
+Ouput: Minimum platforms required: 2
+```
+
 # FAQ
 
 #### Who can join the Challenge?
