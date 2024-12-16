@@ -741,14 +741,16 @@ Constraints
 requirement.
 ```
 ![image](https://github.com/user-attachments/assets/834a96fa-24d3-45ab-8ef2-cfeb44639432)
+
 Example 1:
 ```
 Input: arrivals = [900, 940, 950, 1100, 1500, 1800]
 departures = [910, 1200, 1120, 1130, 1900, 2000]
 Output 1: Minimum platforms required: 1
 ```
-```
+
 Explanation
+```
 Input Format
 Two Arrays:
 
