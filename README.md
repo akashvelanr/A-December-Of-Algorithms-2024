@@ -42,6 +42,7 @@ Check out our FAQ for more information.
 - [**December 14 - Split the Squad**](#december-14---split-the-squad)
 - [**December 15 -  Holiday Gift Arrangement**](#december-15---holiday-gift-arrangement)
 - [**December 16 -  Train Platform Calculation**](#december-16---train-platform-calculation)
+- [**December 17 -  Cybersecurity Alert Management**](#december-17---cybersecurity-alert-management)
 
   
 
@@ -779,7 +780,42 @@ Input: arrivals = [1030, 1015, 1045, 1100, 1500, 1530]
 departures = [1040, 1105, 1050, 1130, 1515, 1600]
 Ouput: Minimum platforms required: 2
 ```
-
+### December 17 - Cybersecurity Alert Management System
+#### Problem Statement
+```
+A cybersecurity company monitors network traffic to detect malicious activities.
+The system uses a hash table to store and manage incoming alerts based on their unique threat IDs.
+Each alert has associated metadata, including timestamp, IP address, and threat level.
+The challenge lies in handling the following constraints efficiently:
+High Throughput: The system must process millions of alerts per second, ensuring minimal latency in storing and retrieving threat IDs.
+Duplicate Alerts: If the same threat ID is received multiple times within 30 seconds, only the first instance should be stored, and subsequent duplicates should be ignored.
+Eviction Policy: Alerts older than 5 minutes must be removed automatically to free up memory.
+Priority Updates: If an alert is updated with a higher threat level, the hash table must reflect the latest information without affecting performance.
+Memory Optimization: Due to limited memory, the system must handle collisions effectively while maintaining a low memory footprint.
+The task is to design the alert management system using a hash table to ensure high efficiency, scalability, and accuracy under the given constraints.
+```
+Sample 1:
+```
+Input:
+Incoming alerts:
+[  {"id": "A123", "timestamp": "00:00:10", "threat_level": 3},  {"id": "A123", "timestamp": "00:00:15", "threat_level": 3},  {"id": "B456", "timestamp": "00:00:20", "threat_level": 2},  {"id": "A123", "timestamp": "00:00:30", "threat_level": 5},  {"id": "B456", "timestamp": "00:05:05", "threat_level": 2}]
+Output:
+Stored alerts:
+[  {"id": "A123", "timestamp": "00:00:30", "threat_level": 5},  {"id": "B456", "timestamp": "00:05:05", "threat_level": 2}]
+Explanation:
+The duplicate alert for A123 within 30 seconds (00:00:15) is ignored.
+The priority of A123 is updated to level 5 (00:00:30).
+Alerts older than 5 minutes are removed (e.g., B456 at 00:00:20).
+```
+Sample 2:
+```
+Input:
+Incoming alerts :
+[  {"id": "X001", "timestamp": "12:00:00", "threat_level": 1},  {"id": "Y002", "timestamp": "12:02:30", "threat_level": 3},  {"id": "X001", "timestamp": "12:02:45", "threat_level": 2},  {"id": "Z003", "timestamp": "12:07:00", "threat_level": 4}]
+Output:
+Stored alerts:
+[  {"id": "Y002", "timestamp": "12:02:30", "threat_level": 3},  {"id": "X001", "timestamp": "12:02:45", "threat_level": 2},  {"id": "Z003", "timestamp": "12:07:00", "threat_level": 4}]
+```
 # FAQ
 
 #### Who can join the Challenge?
