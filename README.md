@@ -780,7 +780,7 @@ Input: arrivals = [1030, 1015, 1045, 1100, 1500, 1530]
 departures = [1040, 1105, 1050, 1130, 1515, 1600]
 Ouput: Minimum platforms required: 2
 ```
-### December 17 - Cybersecurity Alert Management System
+### December 17 - Cybersecurity Alert Management
 #### Problem Statement
 ```
 A cybersecurity company monitors network traffic to detect malicious activities.
