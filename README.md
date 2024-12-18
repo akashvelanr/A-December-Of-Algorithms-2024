@@ -41,6 +41,12 @@ Check out our FAQ for more information.
 - [**December 13 - Minimum Swap Sorting Problem**](#december-13---minimum-swap-sorting-problem)
 - [**December 14 - Split the Squad**](#december-14---split-the-squad)
 - [**December 15 -  Holiday Gift Arrangement**](#december-15---holiday-gift-arrangement)
+- [**December 16 -  Train Platform Calculation**](#december-16---train-platform-calculation)
+- [**December 17 -  Cybersecurity Alert Management**](#december-17---cybersecurity-alert-management)
+- [**December 18 -  Howard's Rare Gems**](#december-18---howards-rare-gems)
+
+
+  
 
 
 
@@ -717,6 +723,135 @@ Explanation:
 Hints:
 ```
 Use a greedy approach to group consecutive houses.
+```
+
+### December 16 - Train Platform Calculation
+#### Problem Statement
+```
+We are tasked with determining the minimum number of platforms required at a railway station so that no
+train has to wait for another train to depart. Given the arrival times and departure times of multiple trains,
+the solution must compute how many platforms are required at the station to handle all trains without delay.
+ The input consists of two arrays: arrivals and departures. Each element in arrivals represents the
+arrival time of a train, and the corresponding element in departures represents its departure time.
+ The goal is to calculate the minimum number of platforms required to ensure that no two trains are
+waiting at the same time.
+```
+```
+Constraints
+1. Times are represented in 24-hour format (e.g., 9:00 AM = 900, 11:45 PM = 2345).
+2. Arrival and departure times are sorted or unsorted but paired correctly for each train.
+3. At any point, the number of overlapping intervals (trains at the station) determines the platform
+requirement.
+```
+![image](https://github.com/user-attachments/assets/834a96fa-24d3-45ab-8ef2-cfeb44639432)
+
+Example 1:
+```
+Input: arrivals = [900, 940, 950, 1100, 1500, 1800]
+departures = [910, 1200, 1120, 1130, 1900, 2000]
+Output 1: Minimum platforms required: 1
+```
+
+Explanation
+```
+Input Format
+Two Arrays:
+
+1. arrivals: Contains the arrival times of trains in 24-hour format (e.g., 9:00 AM = 900, 11:45
+PM = 2345).
+2. departures: Contains the corresponding departure times of the same trains in 24-hour format.
+
+One-to-One Mapping:
+1. Each element in arrivals corresponds to the same index in departures. For example:
+2. arrivals[0] is the arrival time of Train 1.
+
+3. departures[0] is the departure time of Train 1.
+Time Constraints:
+
+1. Arrival time is always less than or equal to the departure time for each train.
+2. The arrays can be unsorted but must have the same length.
+Sample Input:
+arrivals = [900, 940, 950, 1100, 1500, 1800] departures = [910, 1200, 1120, 1130, 1900, 2000]
+ Train 1: Arrives at 900, departs at 910.
+ Train 2: Arrives at 940, departs at 1200.
+ Train 3: Arrives at 950, departs at 1120, and so on.
+```
+Example 2:
+```
+Input: arrivals = [1030, 1015, 1045, 1100, 1500, 1530]
+departures = [1040, 1105, 1050, 1130, 1515, 1600]
+Ouput: Minimum platforms required: 2
+```
+### December 17 - Cybersecurity Alert Management
+#### Problem Statement
+```
+A cybersecurity company monitors network traffic to detect malicious activities.
+The system uses a hash table to store and manage incoming alerts based on their unique threat IDs.
+Each alert has associated metadata, including timestamp, IP address, and threat level.
+The challenge lies in handling the following constraints efficiently:
+High Throughput: The system must process millions of alerts per second, ensuring minimal latency in storing and retrieving threat IDs.
+Duplicate Alerts: If the same threat ID is received multiple times within 30 seconds, only the first instance should be stored, and subsequent duplicates should be ignored.
+Eviction Policy: Alerts older than 5 minutes must be removed automatically to free up memory.
+Priority Updates: If an alert is updated with a higher threat level, the hash table must reflect the latest information without affecting performance.
+Memory Optimization: Due to limited memory, the system must handle collisions effectively while maintaining a low memory footprint.
+The task is to design the alert management system using a hash table to ensure high efficiency, scalability, and accuracy under the given constraints.
+```
+Sample 1:
+```
+Input:
+Incoming alerts:
+[  {"id": "A123", "timestamp": "00:00:10", "threat_level": 3},  {"id": "A123", "timestamp": "00:00:15", "threat_level": 3},  {"id": "B456", "timestamp": "00:00:20", "threat_level": 2},  {"id": "A123", "timestamp": "00:00:30", "threat_level": 5},  {"id": "B456", "timestamp": "00:05:05", "threat_level": 2}]
+Output:
+Stored alerts:
+[  {"id": "A123", "timestamp": "00:00:30", "threat_level": 5},  {"id": "B456", "timestamp": "00:05:05", "threat_level": 2}]
+Explanation:
+The duplicate alert for A123 within 30 seconds (00:00:15) is ignored.
+The priority of A123 is updated to level 5 (00:00:30).
+Alerts older than 5 minutes are removed (e.g., B456 at 00:00:20).
+```
+Sample 2:
+```
+Input:
+Incoming alerts :
+[  {"id": "X001", "timestamp": "12:00:00", "threat_level": 1},  {"id": "Y002", "timestamp": "12:02:30", "threat_level": 3},  {"id": "X001", "timestamp": "12:02:45", "threat_level": 2},  {"id": "Z003", "timestamp": "12:07:00", "threat_level": 4}]
+Output:
+Stored alerts:
+[  {"id": "Y002", "timestamp": "12:02:30", "threat_level": 3},  {"id": "X001", "timestamp": "12:02:45", "threat_level": 2},  {"id": "Z003", "timestamp": "12:07:00", "threat_level": 4}]
+```
+
+### December 18 - Howard's Rare Gems
+#### Problem Statement
+```
+Howard, a charismatic yet reckless gem dealer, specializes in acquiring rare and exotic gemstones to make huge profits. He thrives on risky deals and has a knack for identifying high-value chains of diamonds, rubies, and emeralds.
+
+Howard knows he can maximize his earnings if he finds chains with a palindromic arrangement of gemstones, as these rare patterns fetch a significantly higher price.
+
+The prices of individual gems are as follows:
+- A diamond (D) is worth $500.
+- A ruby (R) is worth $250.
+- An emerald (E) is worth $100.
+
+For palindromic chains, the total price is multiplied by the chain's length, adding a massive bonus to the profit. Given a long chain of mixed gemstones, Howard must determine the maximum profit he can achieve by cutting out the most valuable palindromic chain.
+
+```
+Example 1:
+```
+Chain: "RDEREDRRRD"
+Output: $7,250
+Explanation: The longest palindromic chain is "RDEREDR", worth $(250 + 500 + 100 + 100 + 500 + 250 + 250) \times 7 = 7,250.
+```
+
+
+Example 2:
+```
+Chain: "DERRREDERREDEREDR"
+Output: $24,000
+Explanation: The longest palindromic chain is "REDERREDER", worth $(250 + 100 + 500 + 250 + 500 + 250 + 500 + 100 + 250 + 250) \times 10 = 24,000.
+```
+
+Hints:
+```
+Use efficient algorithms like Manacher’s Algorithm to identify the longest palindromic substring quickly and calculate the profit.
 ```
 # FAQ
 
