@@ -45,7 +45,7 @@ Check out our FAQ for more information.
 - [**December 17 -  Cybersecurity Alert Management**](#december-17---cybersecurity-alert-management)
 - [**December 18 -  Howard's Rare Gems**](#december-18---howards-rare-gems)
 - [**December 19 -  Endless Towers**](#december-19---endless-towers)
-
+- [**December 20 -  Robot Pathways Problem**](#december-20---robot-pathways-problem)
 
   
 
@@ -998,6 +998,34 @@ Sequence of moves:
 14. Move disk 2 from A to C
 15. Move disk 1 from B to C
 
+```
+### December 20 - Robot Pathways Problem
+#### Problem Statement
+```
+You are given an integer array steps[] representing different step sizes a robot can take and an integer distance.
+Find the number of distinct ways the robot can reach the exact distance by taking any combination of the given step sizes.
+Note:
+The robot can take any step size from steps[] as many times as needed.
+Steps can be taken in any order.
+```
+Sample:
+```
+Input:
+steps[] = {1, 2, 3}
+distance = 4
+Output:
+7
+```
+Explanation:
+```
+The robot can reach the distance in the following ways:
+(1, 1, 1, 1)
+(1, 1, 2)
+(1, 2, 1)
+(2, 1, 1)
+(2, 2)
+(1, 3)
+(3, 1)
 ```
 
 
