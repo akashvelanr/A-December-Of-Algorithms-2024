@@ -46,6 +46,7 @@ Check out our FAQ for more information.
 - [**December 18 -  Howard's Rare Gems**](#december-18---howards-rare-gems)
 - [**December 19 -  Endless Towers**](#december-19---endless-towers)
 - [**December 20 -  Robot Pathways Problem**](#december-20---robot-pathways-problem)
+- [**December 21 -  The Intersection**](#december-21---the-intersection)
 
   
 
@@ -1028,7 +1029,57 @@ The robot can reach the distance in the following ways:
 (3, 1)
 ```
 
+### December 21 - The Intersection
+#### Problem Statement
 
+```
+You are given two singly linked lists that may or may not intersect. Write a program to
+find the value of the node where the two linked lists intersect. If they do not
+intersect, return "No intersection found."
+```
+![image](https://github.com/user-attachments/assets/52c2bf7e-7e2b-4aff-b805-ef4682674b11)
+
+Input Format
+```
+1. Enter the number of nodes in the first linked list N: An integer.
+2. Enter N space-separated node values for the first linked list: The values of the
+nodes.
+3. Enter the number of nodes in the second linked list M: An integer.
+4. Enter M space-separated node values for the second linked list: The values of
+the nodes.
+5. Enter the position (1-indexed) in the first linked list where the second linked
+list intersects (0 if no intersection): An integer.
+```
+Output Format:
+```
+The program should display:
+1. "The intersection point is: <value>" if an intersection exists.
+2. "No intersection found." if the linked lists do not intersect.
+```
+Sample Input 1:
+```
+Enter the number of nodes in the first linked list: 5
+Enter the node values: 1 2 3 4 5
+Enter the number of nodes in the second linked list: 3
+Enter the node values: 6 7 8
+Enter the position of intersection: 3
+```
+Sample Output 1
+```
+The intersection point is: 3
+```
+Sample Input 2:
+```
+Enter the number of nodes in the first linked list: 4
+Enter the node values: 10 20 30 40
+Enter the number of nodes in the second linked list: 3
+Enter the node values: 50 60 70
+Enter the position of intersection: 0
+```
+Sample Output 2:
+```
+No intersection found.
+```
 # FAQ
 
 #### Who can join the Challenge?
