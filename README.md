@@ -47,6 +47,7 @@ Check out our FAQ for more information.
 - [**December 19 -  Endless Towers**](#december-19---endless-towers)
 - [**December 20 -  Robot Pathways Problem**](#december-20---robot-pathways-problem)
 - [**December 21 -  The Intersection**](#december-21---the-intersection)
+- [**December 22 -  Earthquake Propagation**](#december-22---earthquake-propagation)
 
   
 
@@ -1079,6 +1080,36 @@ Enter the position of intersection: 0
 Sample Output 2:
 ```
 No intersection found.
+```
+
+### December 22 - Earthquake Propagation
+#### Problem Statement
+
+```
+You are given a list of buildings in a city, each represented by a 0-indexed 2D integer array buildings[i] = [xi,
+yi, ri]. Here, xi and yi are the coordinates of the building, and ri is the radius of its earthquake shockwave.
+When an earthquake occurs at a building, it will affect all buildings within its radius. The affected buildings
+will further propagate the earthquake shockwave to other buildings within their radius.
+Return the maximum number of buildings that can be affected if you trigger the earthquake at one building.
+```
+![image](https://github.com/user-attachments/assets/18cf62d5-9d59-4e2c-9372-46ec3ffe180d)
+
+Sample I/O 1:
+```
+
+Input: buildings = [[2,1,3],[6,1,4]]
+Output: 2
+Explanation:
+The above figure shows the positions and ranges of the 2
+earthquakes . If an earthquake occurs at the left building, the right
+building will not be affected.But if an earthquake occurs at the
+right building, both buildings will be affected.So the maximum
+number of buildings that can be affected is max(1, 2) = 2.
+```
+Sample I/O 2 :
+```
+Input: buildings = [[1,1,5],[10,10,5]]
+Output: 1
 ```
 # FAQ
 
