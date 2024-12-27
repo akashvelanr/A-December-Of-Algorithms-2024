@@ -52,6 +52,7 @@ Check out our FAQ for more information.
 - [**December 24 -  String Permutation Grouping**](#december-24---string-permutation-grouping)
 - [**December 25 -  Task Scheduler**](#december-25---task-scheduler)
 - [**December 26 -  Escape The Lava Field**](#december-26---escape-the-lava-field)
+- [**December 27 -  Trapping Rain Water**](#december-27---trapping-rain-water)
 
 
   
@@ -1240,7 +1241,7 @@ out dynamic hashing. Also a bonus criteria would be:
 
 
 
-### December 26 - ESCAPE THE LAVA FIELD
+### December 26 - Escape The Lava Field
 
 #### Problem Statement
 ```
@@ -1271,8 +1272,31 @@ Example 2:-
 Input:nums = [3, 2, 1, 0, 4]
 Output: False
 ```
+### December 27 - Trapping Rain Water
 
-
+#### Problem Statement
+```
+Given an array representing bar heights in an elevation map, compute the total units of
+water trapped between bars after raining. The width of each bar is 1. Return the total
+trapped water.
+Problem Statement:-
+Given n non-negative integers representing an elevation map where the width of each bar
+is 1, compute how much water it can trap after raining.
+```
+Example 1:
+```
+Input: height = [0,1,0,2,1,0,1,3,2,1,2,1]
+Output: 6
+Explanation: The above elevation map (black section) is represented
+by array [0,1,0,2,1,0,1,3,2,1,2,1]. In this case, 6 units of rain water
+(blue section) are being trapped.
+```
+Example 2:-
+```
+Input: height =
+[4,2,0,3,2,5]
+Output: 9
+```
 # FAQ
 
 #### Who can join the Challenge?
