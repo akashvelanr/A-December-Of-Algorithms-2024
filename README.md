@@ -53,6 +53,7 @@ Check out our FAQ for more information.
 - [**December 25 -  Task Scheduler**](#december-25---task-scheduler)
 - [**December 26 -  Escape The Lava Field**](#december-26---escape-the-lava-field)
 - [**December 27 -  Trapping Rain Water**](#december-27---trapping-rain-water)
+- [**December 28 -  Bookshelf Organizer**](#december-28---bookshelf-organizer)
 
 
   
@@ -1296,6 +1297,51 @@ Example 2:-
 Input: height =
 [4,2,0,3,2,5]
 Output: 9
+```
+### December 28 - Bookshelf Organizer
+
+#### Problem Statement
+
+```
+Sonny has several books and wants to organize them into shelves such
+that each shelf contains exactly shelfSize books, and the books on each
+shelf are arranged in sequential order based on their assigned numbers.
+Given an integer array books where books[i] represents the number on the
+ith book and an integer shelfSize, return true if he can organize the books
+this way, or false otherwise.
+```
+
+SAMPLE TEST CASE:
+
+```
+INPUT:
+books = [1, 2, 3, 6, 2, 3, 4, 7, 8]
+shelfSize = 3
+One possible arrangement is:
+Group 1: [1, 2, 3]
+Group 2: [2, 3, 4]
+Group 3: [6, 7, 8]
+OUTPUT:
+So,you return true
+If not possible,you return false.
+```
+
+SAMPLE TEST CASE 2:
+
+```
+books = [1, 2, 3, 4, 5]
+shelfSize = 4
+One possible arrangement is:
+[1, 2, 3, 4]
+But we can’t allot a shelf for the book 5.
+OUTPUT:
+So,you need to return false.
+```
+
+```
+P.S: While a O(N*N) solution will be able to handle small test cases,it will fail
+with large enough ones,so can you come up with a solution that can visit
+each element only once,i.e a O(N) solution?
 ```
 # FAQ
 
