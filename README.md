@@ -55,6 +55,7 @@ Check out our FAQ for more information.
 - [**December 27 -  Trapping Rain Water**](#december-27---trapping-rain-water)
 - [**December 28 -  Bookshelf Organizer**](#december-28---bookshelf-organizer)
 - [**December 29 -  The Maze of Weighted Portals**](#december-29---the-maze-of-weighted-portals)
+- [**December 30 -  Super Egg Drop**](#december-30---super-egg-drop)
 
 
   
@@ -1435,6 +1436,65 @@ for visited portals.
 Efficiently handle up to 1000 portals and avoid redundant calculations.
 Use priority queues or dynamic programming for optimal performance.
 ```
+### December 30 - Super Egg Drop
+
+#### Problem Statement
+
+```
+You are tasked with finding the critical floor in a building with n floors using k identical eggs. The critical
+floor, fff, is defined as the highest floor where an egg does not break when dropped. The following rules
+apply:
+If an egg is dropped from floor xxx:
+It breaks if x>fx > fx>f.
+It does not break if x≤fx \leq fx≤f.
+Objective:
+Minimize the maximum number of moves required to determine the critical floor fff with certainty.
+Constraints:
+If an egg breaks, it can no longer be used.
+If an egg does not break, it can be reused for subsequent drops.
+You may drop eggs from any floor between 1 and nnn.
+Goal:
+Determine the minimum number of moves required to guarantee the discovery of fff, regardless of the initial position of fff .
+```
+![image](https://github.com/user-attachments/assets/b005f7c4-637f-46bb-a80b-934f04bf0bf2)
+
+Sample I/O 1:
+
+```
+Input: k = 2 (eggs), n = 6 (floors)
+Output 1: Minimum moves required = 3
+```
+
+Explanation of input format 1:
+
+```
+The input for this problem consists of two integers:
+1. Number of Eggs (kkk):
+o Represents the total number of identical eggs available for testing.
+o Each egg can either break or remain intact when dropped from a floor.
+o If an egg breaks, it cannot be reused in further tests.
+2. Number of Floors (nnn):
+o Represents the total number of floors in the building, labeled from 1 to nnn.
+o The goal is to find the critical floor fff (where 0≤f≤n0 \leq f \leq n0≤f≤n) using the minimum
+number of moves.
+
+Key Characteristics of Input:
+1. Both kkk (number of eggs) and nnn (number of floors) are positive integers:
+o 1≤k≤1001 \leq k \leq 1001≤k≤100
+Meaning of k=1k = 1k=1:
+ If there is only one egg, it can be tested sequentially from the first floor upwards until it breaks. In
+this case, the worst-case number of moves is equal to nnn.
+Meaning of n=1n = 1n=1:
+ If there is only one floor, the critical floor is either floor 1 or floor 0 (no breaking). Only one move is
+needed.
+```
+Sample I/O 2:
+
+```
+Input: k = 3 (eggs), n = 14 (floors)
+Ouput: Minimum moves required = 4
+```
+![image](https://github.com/user-attachments/assets/7dbd12bd-2d4c-4d53-a566-f65102af7d27)
 
 References :
 
@@ -1443,6 +1503,8 @@ https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm
 https://en.wikipedia.org/wiki/Shortest_path_problem
 
 https://en.wikipedia.org/wiki/A*_search_algorithm
+
+
 # FAQ
 
 #### Who can join the Challenge?
