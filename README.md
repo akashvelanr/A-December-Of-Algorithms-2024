@@ -56,6 +56,7 @@ Check out our FAQ for more information.
 - [**December 28 -  Bookshelf Organizer**](#december-28---bookshelf-organizer)
 - [**December 29 -  The Maze of Weighted Portals**](#december-29---the-maze-of-weighted-portals)
 - [**December 30 -  Super Egg Drop**](#december-30---super-egg-drop)
+- [**December 31 -  Speed Of Light Simulation**](#december-31---speed-of-light-simulation)
 
 
   
@@ -1504,6 +1505,63 @@ https://en.wikipedia.org/wiki/Shortest_path_problem
 
 https://en.wikipedia.org/wiki/A*_search_algorithm
 
+
+### December 31 - Speed of Light Simulation
+
+#### Problem Statement
+```
+You are designing a physics simulation where the speed of light needs to be
+ approximated efficiently. The simulation requires calculating the normalized
+ velocity vectors of particles in real-time. Given `n` particles with their
+ initial velocity components, devise an algorithm to compute their normalized
+velocities within strict time constraints. You can't use division in the algorithm
+ as it is a slow system-independent process.
+
+```
+
+
+## Input Format
+
+![image](https://github.com/user-attachments/assets/0418e03c-b303-4f82-bf4d-dff3cd751301)
+
+## Output Format
+Output `n` lines, each containing three floating-point numbers representing the normalized velocity vector of the `i`-th particle:
+
+![image](https://github.com/user-attachments/assets/daac15d2-f2aa-40ea-af56-fd3ec3338a65)
+
+![image](https://github.com/user-attachments/assets/7f80c1ac-4de8-46b4-b76a-2ff52b1a242b)
+
+## Constraints
+
+![image](https://github.com/user-attachments/assets/dad67bbc-c7e2-4e03-8a9b-89b5e78e1340)
+
+## Notes
+```
+Division is not allowed. To achieve the required performance, traditional square root
+ computations may not suffice for large `n`. Consider optimizing your solution using 
+approximation techniques such as Newton's method and try using bit manipulation based on
+ the IEEE 754 format. For more pointers, look for the Quake III algorithm.
+
+```
+## Example Input
+
+```
+vec1:  3  4  0
+vec2: -6  8  0
+vec3:  5  12 0
+
+```
+## Example Output
+
+```
+normalised vec1:  0.6      0.8      0.0
+normalised vec2: -0.6      0.8      0.0
+normalised vec3:  0.384615 0.923077 0.0
+
+```
+## Edge Cases
+
+![image](https://github.com/user-attachments/assets/0c83f6d1-9cfb-4434-9080-816e7f8cdde8)
 
 # FAQ
 
